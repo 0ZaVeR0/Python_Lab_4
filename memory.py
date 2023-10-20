@@ -3,9 +3,12 @@ memory = {}
 def remember(functions):
     def save_args(*args):
         print("args >> ", args)
-        if args[1:] in memory.values():
-            print("Identical Shape already exist")
-            exit (-1)
+        try:
+            if args[1:] in dictionary.values():
+                raise Exception("Exeption: Class aleready exist")
+        except Exception as e:
+            print(e)
+            exit(-1)
 
         memory[args[0]] = args[1:]
         print("memory >> ", memory)
