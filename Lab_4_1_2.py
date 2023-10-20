@@ -1,7 +1,6 @@
 from squre import Squre
 
 print("Create (1, 'green'): ")
-
 c = Squre(1, "green")
 print("Squre: ", c)
 
